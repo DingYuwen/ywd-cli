@@ -1,0 +1,52 @@
+{
+  "name": "h5-vite-vue3",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "lint:script": "eslint --ext .ts,vue --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "@vant/touch-emulator": "^1.3.2",
+    "axios": "^0.27.2",
+    "pinia": "^2.0.14",
+    "store": "^2.0.12",
+    "vant": "4.0.0-beta.0",
+    "vue": "^3.2.25",
+    "vue-router": "4",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@headlessui/vue": "^1.4.3",
+    "@heroicons/vue": "^1.0.5",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@tailwindcss/forms": "^0.5.2",
+    "@tailwindcss/line-clamp": "^0.3.1",
+    "@tailwindcss/typography": "^0.5.0",
+    "@types/node": "^18.6.1",
+    "@types/store": "^2.0.2",
+    "@types/tailwindcss": "^3.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
+    "@vitejs/plugin-vue": "^2.0.0",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/eslint-config-typescript": "^10.0.0",
+    "autoprefixer": "^10.4.8",
+    "eslint": "^8.7.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.3.0",
+    "husky": "^8.0.1",
+    "less": "^4.1.3",
+    "postcss": "^8.4.5",
+    "postcss-px-2-vp-pro": "^0.0.3",
+    "prettier": "^2.5.1",
+    "prettier-plugin-tailwindcss": "^0.1.4",
+    "tailwindcss": "^3.0.15",
+    "typescript": "^4.7.3",
+    "unplugin-auto-import": "^0.10.1",
+    "unplugin-vue-components": "^0.21.2",
+    "vite": "^3.0.0",
+    "vue-tsc": "^0.34.7"
+  }
+}

@@ -1,0 +1,7 @@
+/node_modules
+/dist
+/src/assets/
+/package-lock.json
+.DS_Store
+auto-imports.d.ts
+components.d.ts
