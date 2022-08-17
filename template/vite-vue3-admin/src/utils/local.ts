@@ -1,9 +1,9 @@
 /*
  * @Author:dingyuwen
  * @Date: 2022-08-10 18:14:46
- * @LastEditTime: 2022-08-11 13:22:35
- * @LastEditors:dingyuwen
- * @Description: 
+ * @LastEditTime: 2022-08-17 23:28:21
+ * @LastEditors: dingyuwen ding_yuwen@163.com
+ * @Description:
  */
 import { TOKEN, USER_INFO, MENU } from './constant'
 
@@ -21,7 +21,9 @@ export const setItem = (key: string, value: any) => {
 }
 export const getItem = (key: string, type = 'local') => {
   const data = type === 'local' ? localStorage.getItem(key) : sessionStorage.getItem(key)
-  if(!data){ return null }
+  if (!data) {
+    return null
+  }
   try {
     return JSON.parse(data)
   } catch (error) {

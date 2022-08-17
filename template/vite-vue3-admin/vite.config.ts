@@ -113,15 +113,15 @@ export default defineConfig(({ mode }: ConfigEnv) => {
           drop_debugger: true, // 生产环境去除debugger
         },
       },
-      // rollupOptions: {
-      //   input: {
-      //     main: resolve(__dirname, 'index.html'),
-      //     preview: resolve(__dirname, 'preview/index.html'),
-      //   },
-      //   output: {
-      //     manualChunks: {},
-      //   },
-      // },
+      rollupOptions: {
+        input: {
+          main: resolve(__dirname, 'index.html'),
+          preview: resolve(__dirname, 'preview/index.html'),
+        },
+        output: {
+          manualChunks: {},
+        },
+      },
     },
     optimizeDeps: {
       include: ['@vueuse/core', 'element-plus'],
@@ -133,14 +133,14 @@ export default defineConfig(({ mode }: ConfigEnv) => {
       cors: true, // 允许跨域
 
       // 设置代理，根据项目实际情况配置
-      // proxy: {
-      //   '/api': {
-      //     target: 'https://nest-api.buqiyuan.site/api/admin/',
-      //     changeOrigin: true,
-      //     secure: false,
-      //     rewrite: path => path.replace('/api/', '/'),
-      //   },
-      // },
+      proxy: {
+        '/api': {
+          target: 'https://nest-api.buqiyuan.site/api/admin/',
+          changeOrigin: true,
+          secure: false,
+          rewrite: path => path.replace('/api/', '/'),
+        },
+      },
     },
   }
 })

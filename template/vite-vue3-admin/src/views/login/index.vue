@@ -1,7 +1,7 @@
 <!--
  * @Author:dingyuwen
  * @Date: 2022-08-10 18:14:46
- * @LastEditTime: 2022-08-11 20:22:34
+ * @LastEditTime: 2022-08-17 23:49:22
  * @LastEditors: dingyuwen ding_yuwen@163.com
  * @Description: 
 -->
@@ -25,7 +25,10 @@
 			>
 				Loading Area
 			</div> -->
-      <div m-20 text-5xl animate-bounce-alt animate-count-infinite animate-duration-1s> Loading... </div>
+      <div v-if="!isLogin" m-20 justify-center items-center flex>
+        <el-button type="primary" round @click="login">sign in</el-button>
+      </div>
+      <div v-else m-20 animate-bounce-alt animate-count-infinite animate-duration-1s> Loading... </div>
     </div>
   </div>
 </template>
@@ -34,8 +37,21 @@
   // import PasswordForm from './components/passwordForm.vue'
   // import PhoneForm from './components/phoneForm.vue'
   import { ref } from 'vue'
+  import { setItem } from '@/utils/local'
+  import { TOKEN } from '@/utils/constant'
+  const router = useRouter()
+  const isLogin = ref(false)
 
-  const showWechatLogin = ref(false)
-
-  const wechatLogin = () => {}
+  const login = () => {
+    isLogin.value = true
+    setTimeout(() => {
+      isLogin.value = false
+      setItem(TOKEN, 'haslogin')
+      router.replace({ path: '/' })
+      ElMessage({
+        type: 'success',
+        message: 'Login Success 登录成功',
+      })
+    }, 2000)
+  }
 </script>

@@ -1,7 +1,7 @@
 /*
  * @Author:dingyuwen
  * @Date: 2022-08-10 15:22:35
- * @LastEditTime: 2022-08-17 22:10:52
+ * @LastEditTime: 2022-08-17 23:54:01
  * @LastEditors: dingyuwen ding_yuwen@163.com
  * @Description:
  */
@@ -48,26 +48,26 @@ router.beforeEach(async (to, from, next) => {
     return false
   }
   // 整页路由处理
-  if (to.meta.fullpage) {
-    to.matched = [to.matched[to.matched.length - 1]]
-  }
+  // if (to.meta.fullpage) {
+  //   to.matched = [to.matched[to.matched.length - 1]]
+  // }
   // 加载动态/静态路由
-  if (!isGetRouter) {
-    const apiMenu = getMenu() || []
-    const userInfo = getUser()
-    const userMenu = treeFilter(userRoutes, node => {
-      return node.meta.role ? node.meta.role.filter(item => userInfo.role.indexOf(item) > -1).length > 0 : true
-    })
-    const menu = [...userMenu, ...apiMenu]
-    let menuRouter = filterAsyncRouter(menu)
-    menuRouter = flatAsyncRoutes(menuRouter)
-    menuRouter.forEach(item => router.addRoute('layout', item))
-    routes_404_r = router.addRoute(routes_404)
-    if (to.matched.length === 0) {
-      router.push(to.fullPath)
-    }
-    isGetRouter = true
-  }
+  // if (!isGetRouter) {
+  //   const apiMenu = getMenu() || []
+  //   const userInfo = getUser()
+  //   const userMenu = treeFilter(userRoutes, node => {
+  //     return node.meta.role ? node.meta.role.filter(item => userInfo.role.indexOf(item) > -1).length > 0 : true
+  //   })
+  //   const menu = [...userMenu, ...apiMenu]
+  //   let menuRouter = filterAsyncRouter(menu)
+  //   menuRouter = flatAsyncRoutes(menuRouter)
+  //   menuRouter.forEach(item => router.addRoute('layout', item))
+  //   routes_404_r = router.addRoute(routes_404)
+  //   if (to.matched.length === 0) {
+  //     router.push(to.fullPath)
+  //   }
+  //   isGetRouter = true
+  // }
   beforeEach(to, from)
   next()
 })

@@ -1,4 +1,4 @@
-export const baseName = 'SCUI_RESTRUCTURE'
+export const baseName = 'YWD-CLI'
 
 // 本地缓存常量
 export const TOKEN = `${baseName}--TOKEN`

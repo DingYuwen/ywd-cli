@@ -6,7 +6,7 @@
  * @Description: 
 -->
 <template>
-  <HelloWorld msg="Hello Vue 3.0 + Element Plus + Vite"></HelloWorld>
+  <HelloWorld msg="🔥 Hello ywd-cli 🔥"></HelloWorld>
 </template>
 
 <script setup lang="ts">
