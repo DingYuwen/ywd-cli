@@ -1,22 +1,20 @@
 /*
  * @Author:dingyuwen
  * @Date: 2022-08-10 18:14:46
- * @LastEditTime: 2022-08-11 13:36:02
- * @LastEditors:dingyuwen
- * @Description: 
+ * @LastEditTime: 2022-08-17 22:11:51
+ * @LastEditors: dingyuwen ding_yuwen@163.com
+ * @Description:
  */
 // import {getItem} from '@/utils/local'
 // import {APP_LAYOUT} from '@/utils/constant'
 
 const DEFAULT_CONFIG = {
   //标题
-  APP_NAME: 'SCUI',
+  APP_NAME: 'ywd-cli',
   //首页地址
   DASHBOARD_URL: '/dashboard',
   //版本号
-  APP_VER: '1.5.0',
-  //内核版本号
-  CORE_VER: '1.5.0',
+  APP_VER: '0.1.0',
   //接口地址
   API_URL: '/api',
   //请求超时
